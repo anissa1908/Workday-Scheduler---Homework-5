@@ -1,9 +1,12 @@
 const calendar = document.querySelector("#appointmentCalendar");
 
-for(let day = 1; day < 31; day = day +=1);
+for(let day = 1; day <= 31; day = day +=1){
+
+}
 // console.log("day")
 
-calendar.insertAdjacentHTML("beforeend", `<div class="day">${day}</div>`);
+
+    
 
 
 // GIVEN I am using a daily planner to create a schedule
@@ -54,4 +57,4 @@ calendar.insertAdjacentHTML("beforeend", `<div class="day">${day}</div>`);
 
 
 
-// THEN the saved events persist
+// THEN the saved events remain;
