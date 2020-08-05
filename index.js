@@ -1,3 +1,11 @@
+const caldendar = document.querySelector("#appointmentCalendar");
+
+for(let day = 1; day < 31; day = day +=1);
+console.log(day)
+
+
+
+
 // GIVEN I am using a daily planner to create a schedule
 
 // WHEN I open the planner

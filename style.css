@@ -1,0 +1,9 @@
+body {
+    background-color: lightpink;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: max-content;
+}
