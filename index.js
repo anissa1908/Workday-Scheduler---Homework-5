@@ -1,60 +1,32 @@
-const calendar = document.querySelector("#appointmentCalendar");
-
-for(let day = 1; day <= 31; day = day +=1){
-
-}
-// console.log("day")
 
 
+$(document).ready(function(){
+    const date = new Date();
+    const hour = date.getHours();
+    const todo = localStorage.getItem("todo") ? JSON.parse(localStorage.getItem("todo")) : {}
+
+    //function that appends the timeblocks dynamically onto the page
+    function appendRows(){
+        for (let i = 9; i < 18; i++) {
+              $(".container").append(`
+        <div class="row time-block">
+        <div class="col-2 hour">
+          ${i<12 ? (i+" AM") : i> 12 ? (i-12 + " PM") : "12 PM"}
+        </div>
+        <textarea rows="3" class="description ${i<hour ? "past" : i> hour ? "future" : "present"} col-8">${todo[i] || ""}</textarea>
+        <button class="saveBtn" id=${i}>Save</button>
+      </div>
+        `)
+        }
+    }
+
+    appendRows()
     
-
-
-// GIVEN I am using a daily planner to create a schedule
-
-// WHEN I open the planner
-	
-
-
-
-// THEN the current day is displayed at the top of the calendar
-
-// Does this link to display class in html?
-
-// WHEN I scroll down
-
-
-
-// THEN I am presented with timeblocks for standard business hours
-
-
-
-// WHEN I view the timeblocks for that day
-
-
-
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-
-
-
-// WHEN I click into a timeblock
-
-
-
-// THEN I can enter an event
-
-
-
-// WHEN I click the save button for that timeblock
-
-
-
-// THEN the text for that event is saved in local storage
-
-
-
-// WHEN I refresh the page
-
-
-
-
-// THEN the saved events remain;
+    $("button").on("click",function(){
+       const text = $(this).siblings("textarea").val().trim();
+       const id = $(this).attr("id");
+        console.log(text);
+    todo[id] = text;
+    localStorage.setItem("todo", JSON.stringify(todo))
+    })
+})
