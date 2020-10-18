@@ -12,7 +12,7 @@ HTML, CSS, jQuery, Moment.js, Node.js, Bootstrap, Third-Party API, Local Storage
 
 ## Deployed Image
 
-<img src="Workday-Scheduler---Homework-5\img\Workday Scheduler pic.png">
+![]("Workday-Scheduler---Homework-5\img\Workday Scheduler pic.png")
 
 
 
