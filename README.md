@@ -10,9 +10,7 @@ When I open the planner, then the current day is displayed at the top of the cal
 ## Technologies Used
 HTML, CSS, jQuery, Moment.js, Node.js, Bootstrap, Third-Party API, Local Storage
 
-## Deployed Image
-![](Workday-Scheduler---Homework-5\img\Workday Scheduler pic.png)
-<img src="Workday-Scheduler---Homework-5\img\Workday Scheduler pic.png">
+
 
 
 
